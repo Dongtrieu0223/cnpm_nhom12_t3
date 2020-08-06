@@ -1,0 +1,38 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+#threeform .card-header{
+
+    background-color: #ff5500 !important;
+    color: white;
+
+}
+#threeform .card-body-bottom {
+    background-color: #ff5500 !important;
+    color: white !important;
+}
+#threeform .card-body-bottom a {
+    background-color: #ff5500 !important;
+    color: white !important;
+}
+#threeform .card-body-bottom a:hover {
+    background-color: #ff5500 !important;
+    color: black !important;
+}
+#threeform .btn-primary{
+    background-color: #ff5500 !important;
+    color: white !important;
+    border: none !important;
+}
+#threeform .btn-primary:hover{
+    background-color: #ff5500 !important;
+    color: black !important;
+    border: none !important;
+}
+
