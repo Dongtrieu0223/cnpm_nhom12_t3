@@ -111,6 +111,8 @@ public class Login extends HttpServlet{
                             request.setAttribute("errorCapt", checklog);
                         }
                     }}
+
+
                     if ((checkUser == false)||(rs2==false)) {
 
 
@@ -155,6 +157,7 @@ public class Login extends HttpServlet{
             return sb.toString();
 
         }
+        //
     public static String getClientIpAddr(HttpServletRequest request) {
         String ip = request.getHeader("X-Forwarded-For");
         if (ip == null || ip.length() == 0 || "unknown".equalsIgnoreCase(ip)) {

@@ -82,13 +82,14 @@ public class ChangePassword2 extends HttpServlet {
             }
 
 
-
+            // check thấy sai => quay về trang changepassword hiển thị thông báo
             if (checkMatKhau == false || checkMatKhauCon == false || checkMaXacThuc == false) {
                 request.setAttribute("errmatkhau", errmatkhau);
                 request.setAttribute("errmatkhaucon", errmatkhaucon);
                 request.setAttribute("errmaxacthuc", errmaxacthuc);
                 request.getRequestDispatcher("changepassword2.jsp").forward(request, response);
             }
+            // check thấy đúng=> update vào cơ sở dữ liệu và quay về trang login
             if (checkMatKhau == true && checkMatKhauCon == true && checkMaXacThuc == true) {
                 String sqlChangePass="UPDATE user SET user.password=MD5(?)  WHERE user.email=?";
                 String sqlDeleteForgot="DELETE FROM forgotpass WHERE forgotpass.email=?";

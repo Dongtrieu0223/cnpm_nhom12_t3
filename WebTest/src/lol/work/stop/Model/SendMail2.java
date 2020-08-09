@@ -14,6 +14,7 @@ public class SendMail2 {
             MessagingException {
 
         // sets SMTP server properties
+        
         Properties properties = new Properties();
         properties.put("mail.smtp.host", host);
         properties.put("mail.smtp.port", port);
@@ -44,6 +45,8 @@ public class SendMail2 {
 
         msg.setSubject(sub);
         msg.setSentDate(new Date());
+        // duong dan trong mail láy link của waiting.jsp
+        //3. link cho nguoi dung nhan vao de xac thuc
         msg.setText(message);
 
         // sends the e-mail

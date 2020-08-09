@@ -27,7 +27,7 @@ public class Register2 extends HttpServlet {
         HttpSession s = request.getSession(false);
         Mailtemp mail= (Mailtemp) s.getAttribute("mail");
         String sqlcheckID = "SELECT * FROM user where user.id=(select max(id) from user)";
-System.out.println(mail.getUsername());
+        System.out.println(mail.getUsername());
         ResultSet rs2 = null;
         try {
             ConnectionDB con = new ConnectionDB();
@@ -35,7 +35,7 @@ System.out.println(mail.getUsername());
             rs2 = ps2.executeQuery();
             rs2.next();
             System.out.println(rs2.getInt(1));
-        String sqlInsert = "INSERT INTO user (id,Fullname,username, password,address,phone,email,description,authority,active )";
+                String sqlInsert = "INSERT INTO user (id,Fullname,username, password,address,phone,email,description,authority,active )";
                 String sqlValue = " VALUES  (?,null,?,MD5(?),0,0,?,null,0,?)";
                 String sql = sqlInsert + sqlValue;
                 PreparedStatement ps3 = ConnectionDB.getPreparedStatement(sql);

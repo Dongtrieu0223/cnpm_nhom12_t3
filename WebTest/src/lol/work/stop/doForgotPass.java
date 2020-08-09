@@ -36,6 +36,7 @@ public class doForgotPass extends HttpServlet {
             response.setCharacterEncoding("utf-8");
 
             String email = request.getParameter("email")==null?"":request.getParameter("email");
+            
             int code = (int) Math.floor(((Math.random() * 899999) + 10000000));
             ConnectionDB con = new ConnectionDB();
             String sqlcheckExitsMail = "SELECT user.email FROM user WHERE email=?";
